@@ -3,3 +3,6 @@
 //
 
 #include "push.h"
+
+using namespace std;
+
