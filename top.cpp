@@ -7,14 +7,14 @@
 #include <iostream>
 using namespace std;
 
-int main() {
+int top() {
     int valeur;
     cout << "valeur :" << endl;
     cin >> valeur;
 
     int a[] = {valeur};
 
-    int compteur += a[];
+
 
     for (int i = 0; i < sizeof(a) / sizeof(a[0]); i++) {
     cout << a[i] << endl;
