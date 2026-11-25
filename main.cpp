@@ -42,8 +42,8 @@ int main() {
                     cout << "valeur : "<< " ";
                     cin >> valeur;
 
-                    tableau[compteur] = valeur;
-                    compteur++;
+                    push(tableau, compteur, valeur);
+                    cout << "Valeur empilée" << endl;
                 }
 
                 for (int i = 0; i < stockage; i++) {
