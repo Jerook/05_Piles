@@ -1,5 +1,9 @@
-//
-// Created by adonis on 18.11.2026.
-//
-
 #include "pop.h"
+#include <iostream>
+#include <array>
+
+using namespace std;
+
+void pop(array<int, 5>& tableau, int& compteur) {
+    compteur--;
+}

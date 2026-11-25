@@ -23,27 +23,27 @@ int main() {
     cout << "Ce programme permet de manipuler une pile d'entiers." << endl;
     int option;
     do{
-        cout << "1 - Empiler\n"
-             << "2 - Dépiler\n"
+        cout << "\n1 - Empiler\n"
+             << "2 - Depiler\n"
              << "3 - Consulter le sommet\n"
-             << "4 - Modifier l'élément au sommet\n"
-             << "5 - Vérifier si la pile est vide\n"
+             << "4 - Modifier l'element au sommet\n"
+             << "5 - Verifier si la pile est vide\n"
              << "6 - Afficher le nombre de valeurs\n"
              << "7 - Vider la pile\n"
              << "8 - Afficher toute la pile\n"
              << "0 - Quitter\n\n";
         
-        cout << "Votre choix: " <<endl;
+        cout << "Votre choix: ";
         cin >> option;
 
         switch (option) {
             case 1:
                 if (compteur < stockage) {
-                    cout << "valeur : "<< " ";
+                    cout << "valeur : ";
                     cin >> valeur;
 
                     push(tableau, compteur, valeur);
-                    cout << "Valeur empilée" << endl;
+                    cout << "Valeur empilee : " << endl;
                 }
 
                 for (int i = 0; i < stockage; i++) {
@@ -51,8 +51,16 @@ int main() {
                 }
                 break;
             case 2:
+                if (compteur > 0) {
+                    pop(tableau, compteur);
+                    cout << "Sommet depile." << endl;
+                }
+                else {
+                    cout << "La pile est vide." << endl;
+                }
                 break;
             case 3:
+                top(tableau, compteur);
                 break;
             case 4:
                 break;
@@ -65,7 +73,7 @@ int main() {
             case 8:
                 break;
             case 0:
-                cout <<"Fin du programme" << endl;
+                cout <<"Fin de programme." << endl;
 
                 break;
             default:
