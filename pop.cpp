@@ -5,5 +5,9 @@
 using namespace std;
 
 void pop(array<int, 5>& tableau, int& compteur) {
-    compteur--;
+    if (compteur > 0) {
+        compteur--;
+    }else {
+        cout << "La pile est deja vide" << endl;
+    }
 }

@@ -43,12 +43,10 @@ int main() {
                     cin >> valeur;
 
                     push(tableau, compteur, valeur);
-                    cout << "Valeur empilee : " << endl;
+                    cout << "Valeur empilee." << endl;
                 }
 
-                for (int i = 0; i < stockage; i++) {
-                cout << tableau[i] << endl;
-                }
+
                 break;
             case 2:
                 if (compteur > 0) {
@@ -79,6 +77,21 @@ int main() {
                 compteur = 0;
                 break;
             case 8:
+                if (compteur == 0) {
+                    cout << "La pile est vide." << endl;
+                } else if (compteur == 1) {
+                    cout << "Sommet / Fond ---> " << tableau[0] << endl;
+                } else {
+                    for (int i = compteur - 1; i >= 0; i--) {
+                        if (i == compteur -1 ) {
+                            cout << "sommet --->" << tableau[i] << endl;
+                        }else if (i == 0) {
+                            cout << "fond --->  " << tableau[i] << endl;
+                        }else {
+                            cout << "           " << tableau[i] << endl;
+                        }
+                    }
+                }
                 break;
             case 0:
                 cout <<"Fin de programme." << endl;
