@@ -65,10 +65,18 @@ int main() {
             case 4:
                 break;
             case 5:
+                if (compteur == 0) {
+                    cout << "La pile est vide." << endl;
+                }
+                else {
+                    cout << "La pile n'est pas vide." << endl;
+                }
                 break;
             case 6:
+                cout << "Nombre de valeurs: " << compteur << endl;
                 break;
             case 7:
+                compteur = 0;
                 break;
             case 8:
                 break;
