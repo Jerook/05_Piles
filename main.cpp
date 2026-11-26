@@ -12,13 +12,14 @@ using namespace std;
 
 int main() {
 
+    // Initialisation des valeurs
     const int stockage = 5 ;
     array<int, stockage> ma_pile;
     int nombre = 0;
     int valeur;
     ma_pile.fill(0);
 
-
+    // Affichage général
     cout << "Ce programme permet de manipuler une pile d'entiers." << endl;
     cout << "\n1 - Empiler\n"
      << "2 - Depiler\n"
@@ -43,8 +44,6 @@ int main() {
                     push(ma_pile, nombre, valeur);
                     cout << "Valeur empilee." << endl;
                 }
-
-
                 break;
             case 2:
                 if (nombre > 0) {
@@ -56,14 +55,25 @@ int main() {
                 }
                 break;
             case 3:
-                top(ma_pile, nombre);
+                if (nombre >0) {
+                    top(ma_pile, nombre);
+                }
+                else {
+                    cout << "La pile est vide." << endl;
+                }
                 break;
             case 4:
-                int remplacement;
-                cout << "Valeur de remplacement : ";
-                cin >> remplacement;
-                top(ma_pile, nombre) = remplacement;
-                cout << "Valeur remplacee." << endl;
+                if (nombre > 0) {
+                    int remplacement;
+                    cout << "Valeur de remplacement : ";
+                    cin >> remplacement;
+                    top(ma_pile, nombre) = remplacement;
+                    cout << "Valeur remplacee." << endl;
+                }
+                else {
+                    cout << "La pile est vide." << endl;
+                }
+
                 break;
             case 5:
                 if (empty(ma_pile, nombre)) {
