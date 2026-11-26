@@ -1,12 +1,10 @@
 #include "push.h"
-#include <iostream>
 #include <array>
+#include <stdexcept>
 
-using namespace std;
-
-void push(array<int, 5>& pile, int& compteur, int valeur) {
+void push(std::array<int, 5> &pile, int &compteur, int valeur) {
     if (compteur >= 5) {
-        throw overflow_error("impossible d'empiler dans une pile vide.");
+        throw std::overflow_error("impossible d'empiler dans une pile pleine.");
     }
     pile[compteur] = valeur;
     compteur++;
