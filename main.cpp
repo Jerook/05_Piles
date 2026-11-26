@@ -27,19 +27,22 @@ int main() {
 
     // Affichage général
     cout << "Ce programme permet de manipuler une pile d'entiers." << endl;
-    cout << "\n1 - Empiler\n"
-            << "2 - Depiler\n"
-            << "3 - Consulter le sommet\n"
-            << "4 - Modifier l'element au sommet\n"
-            << "5 - Verifier si la pile est vide\n"
-            << "6 - Afficher le nombre de valeurs\n"
-            << "7 - Vider la pile\n"
-            << "8 - Afficher toute la pile\n"
-            << "0 - Quitter\n\n";
+
     int option;
 
     // Boucle générale du programme
     do {
+        // Menu d'option
+        cout << "\n1 - Empiler\n"
+                << "2 - Depiler\n"
+                << "3 - Consulter le sommet\n"
+                << "4 - Modifier l'element au sommet\n"
+                << "5 - Verifier si la pile est vide\n"
+                << "6 - Afficher le nombre de valeurs\n"
+                << "7 - Vider la pile\n"
+                << "8 - Afficher toute la pile\n"
+                << "0 - Quitter\n\n";
+
         cout << "Votre choix: ";
         cin >> option;
         try {
