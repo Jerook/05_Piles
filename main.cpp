@@ -55,23 +55,23 @@ int main() {
                 }
                 break;
             case 3:
-                if (nombre >0) {
-                    top(ma_pile, nombre);
+                if (empty(ma_pile, nombre)) {
+                    cout << "La pile est vide." << endl;
                 }
                 else {
-                    cout << "La pile est vide." << endl;
+                    top(ma_pile, nombre);
                 }
                 break;
             case 4:
-                if (nombre > 0) {
+                if (empty(ma_pile, nombre)) {
+                    cout << "La pile est vide." << endl;
+                }
+                else {
                     int remplacement;
                     cout << "Valeur de remplacement : ";
                     cin >> remplacement;
                     top(ma_pile, nombre) = remplacement;
                     cout << "Valeur remplacee." << endl;
-                }
-                else {
-                    cout << "La pile est vide." << endl;
                 }
 
                 break;
