@@ -4,6 +4,6 @@
 
 using namespace std;
 
-void push(array<int, 5>& tableau, int& compteur, int valeur);
+void push(array<int, 5>& pile, int& compteur, int valeur);
 
 #endif //INC_05_PILES_PUSH_H

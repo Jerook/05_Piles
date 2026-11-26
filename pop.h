@@ -4,6 +4,6 @@
 
 using namespace std;
 
-void pop(array<int, 5>& tableau, int& compteur);
+void pop(array<int, 5>&, int& compteur);
 
 #endif //INC_05_PILES_POP_H

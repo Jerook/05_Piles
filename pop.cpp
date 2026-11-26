@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void pop(array<int, 5>& tableau, int& compteur) {
+void pop(array<int, 5>&, int& compteur) {
     if (compteur > 0) {
         compteur--;
     }else {

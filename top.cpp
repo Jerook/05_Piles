@@ -4,8 +4,13 @@
 
 using namespace std;
 
-void top(const array<int, 5>& tableau, int compteur) {
-    if (compteur > 0) {
-        cout << "Sommet : " << tableau [compteur-1] << endl;
-    }
+int top(const array<int, 5>& pile, int compteur) {
+    if (compteur <= 0) {
+    }throw underflow_error("impossible de consulter le sommet d'une pile vide.");
+    return pile[compteur - 1];
+}
+int& top(array<int, 5>& pile, int compteur) {
+    if (compteur <= 0) {
+    }throw underflow_error("impossible de remplacer le sommet d'une pile vide.");
+    return pile[compteur - 1];
 }
