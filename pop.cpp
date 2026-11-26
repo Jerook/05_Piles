@@ -5,9 +5,8 @@
 using namespace std;
 
 void pop(array<int, 5>&, int& compteur) {
-    if (compteur > 0) {
-        compteur--;
-    }else {
-        cout << "La pile est deja vide" << endl;
+    if (compteur <= 0) {
+        throw underflow_error("impossible de depiler une pile vide.");
     }
+    compteur--;
 }
