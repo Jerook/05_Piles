@@ -13,7 +13,6 @@ But : Manipulation d'une pile d'entiers
 
 #include <iostream>
 #include <array>
-#include <stdexcept>
 
 using namespace std;
 
@@ -28,22 +27,23 @@ int main() {
     // Affichage général
     cout << "Ce programme permet de manipuler une pile d'entiers." << endl;
 
+    // Menu d'option
+    cout << "\n1 - Empiler\n"
+            << "2 - Depiler\n"
+            << "3 - Consulter le sommet\n"
+            << "4 - Modifier l'element au sommet\n"
+            << "5 - Verifier si la pile est vide\n"
+            << "6 - Afficher le nombre de valeurs\n"
+            << "7 - Vider la pile\n"
+            << "8 - Afficher toute la pile\n"
+            << "0 - Quitter\n\n";
+
+
     int option;
 
     // Boucle générale du programme
     do {
-        // Menu d'option
-        cout << "\n1 - Empiler\n"
-                << "2 - Depiler\n"
-                << "3 - Consulter le sommet\n"
-                << "4 - Modifier l'element au sommet\n"
-                << "5 - Verifier si la pile est vide\n"
-                << "6 - Afficher le nombre de valeurs\n"
-                << "7 - Vider la pile\n"
-                << "8 - Afficher toute la pile\n"
-                << "0 - Quitter\n\n";
-
-        cout << "Votre choix: ";
+        cout << "\nVotre choix: ";
         cin >> option;
         try {
             switch (option) {
@@ -54,8 +54,8 @@ int main() {
                     cout << "Valeur empilee." << endl;
                     break;
                 case 2: // Dépiler le sommet
+                    cout << "Valeur retiree : " << top(ma_pile, nombre) << endl;
                     pop(ma_pile, nombre);
-                    cout << "Sommet depile." << endl;
                     break;
                 case 3: // Consulter le sommet
                     cout << "Sommet : " << top(ma_pile, nombre) << endl;
@@ -100,7 +100,6 @@ int main() {
                     break;
                 case 0: // Quitter le programme
                     cout << "Fin de programme." << endl;
-
                     break;
                 default:
                     break;
